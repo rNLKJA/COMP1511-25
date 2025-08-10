@@ -1,4 +1,4 @@
-# Lecture 2-4: Variables, Control Flow, and Custom Data Types (1.5 Hour Format)
+# Lecture 2-4: Variables, Control Flow, and Custom Data Types
 
 ![](./mindmaps/Programming%20Fundamentals_%20Variables,%20Control%20Flow,%20and%20Custom%20Data%20Types.png)
 

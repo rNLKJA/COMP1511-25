@@ -1,5 +1,7 @@
 # Lecture 2-4: Variables, Control Flow, and Custom Data Types (1.5 Hour Format)
 
+![](./mindmaps/Programming%20Fundamentals_%20Variables,%20Control%20Flow,%20and%20Custom%20Data%20Types.png)
+
 ## Why These Topics Matter
 
 These foundational concepts transform simple sequential code into powerful, dynamic programs. Variables let programs store and manipulate data, control flow enables decision-making and repetition, and custom data types help organise complex information. Together, they form the building blocks that appear in virtually every programming language.

@@ -1,4 +1,4 @@
-# Mock Exam 3: Lectures 13-15 (Linked List Deletion, Advanced Data Structures, Exam Preparation)
+# Mock Exam 3: Comprehensive Programming Assessment
 **Time Limit: 1 hour**  
 **Total Marks: 100**
 
@@ -7,360 +7,318 @@
 ## Section A: Multiple Choice Questions (30 marks)
 *Choose the best answer for each question. 2 marks each.*
 
-**Question 1:** What is the basic structure of a linked list node?
-a) Only data
-b) Only a pointer to next
-c) Data and a pointer to next
-d) An array of data
+**Question 1:** What is the correct way to declare a constant in C?
+a) `const int MAX_SIZE = 100;`
+b) `#define MAX_SIZE 100`
+c) `int MAX_SIZE = 100;`
+d) Both a and b are correct
 
-**Question 2:** How do you know you've reached the end of a linked list?
-a) The data is 0
-b) The next pointer is NULL
-c) The node is deleted
-d) The list is empty
-
-**Question 3:** What is the time complexity of inserting at the head of a linked list?
-a) O(1)
-b) O(n)
-c) O(log n)
-d) O(n²)
-
-**Question 4:** When deleting a node from a linked list, what must you remember to do?
-a) Update pointers of surrounding nodes
-b) Free the memory of the deleted node
-c) Both a and b
-d) Nothing special required
-
-**Question 5:** What happens if you access memory after calling `free()`?
-a) Program continues normally
-b) Undefined behavior (potential crash)
-c) Memory is automatically reallocated
-d) Compilation error
-
-**Question 6:** Which operation is most efficient at the head of a linked list?
-a) Insertion only
-b) Deletion only
-c) Both insertion and deletion
-d) Neither operation
-
-**Question 7:** What will this code do?
+**Question 2:** What will this code print?
 ```c
-struct node *temp = head;
-head = head->next;
-free(temp);
+int x = 5;
+int y = 3;
+printf("%d", x / y);
 ```
-a) Delete the last node
-b) Delete the first node
-c) Delete a middle node
-d) Cause an error
+a) 1.67
+b) 1
+c) 2
+d) Error
 
-**Question 8:** In a function that deletes by value, what should you do if the value is not found?
-a) Delete the first node anyway
-b) Return the original head unchanged
-c) Return NULL
-d) Exit the program
+**Question 3:** Which loop type is best for processing input until a specific value is encountered?
+a) For loop
+b) While loop with counter
+c) Sentinel-controlled while loop
+d) Do-while loop
 
-**Question 9:** What is the main advantage of linked lists over arrays?
-a) Faster access to elements
-b) Dynamic size
-c) Less memory usage
-d) Easier to implement
-
-**Question 10:** When traversing a linked list, which loop condition is correct?
-a) `while (current < size)`
-b) `while (current != NULL)`
-c) `while (current->next != NULL)`
-d) `for (int i = 0; i < size; i++)`
-
-**Question 11:** What does this function do?
+**Question 4:** What is the output of this code?
 ```c
-int largest(struct node *head) {
-    int max = head->data;
-    struct node *current = head->next;
-    while (current != NULL) {
-        if (current->data > max) {
-            max = current->data;
-        }
-        current = current->next;
-    }
-    return max;
-}
+int i = 0;
+do {
+    printf("%d ", i);
+    i += 2;
+} while (i < 6);
 ```
-a) Counts nodes
-b) Finds the largest value
-c) Sums all values
-d) Deletes the largest node
+a) 0 2 4
+b) 0 2 4 6
+c) 2 4 6
+d) 0 1 2 3 4 5
 
-**Question 12:** In exam preparation, what is a "hurdle question"?
-a) The hardest question on the exam
-b) A question you must pass to continue
-c) An optional bonus question
-d) A multiple choice question
+**Question 5:** Which operator has the highest precedence?
+a) `+`
+b) `*`
+c) `()`
+d) `=`
 
-**Question 13:** What is the best strategy for exam time management?
-a) Start with the hardest questions
-b) Spend equal time on all questions
-c) Read all questions first, start with easier ones
-d) Answer questions in order only
+**Question 6:** What will `strlen("Hello\n")` return?
+a) 5
+b) 6
+c) 7
+d) Error
 
-**Question 14:** When debugging linked list code, what should you check first?
-a) The algorithm logic
-b) NULL pointer handling
-c) Memory allocation
-d) Function prototypes
+**Question 7:** In `main(int argc, char *argv[])`, what does `argv[1]` represent?
+a) The program name
+b) The first command line argument
+c) The number of arguments
+d) The last argument
 
-**Question 15:** What makes a good exam answer for coding questions?
-a) Shortest possible code
-b) Code that compiles and handles edge cases
-c) Complex algorithms
-d) Lots of comments
+**Question 8:** What does the `&` operator do with variables?
+a) Gets the value of a variable
+b) Gets the address of a variable
+c) Multiplies two variables
+d) Compares two variables
+
+**Question 9:** What will this code print?
+```c
+int x = 10;
+int *ptr = &x;
+*ptr = 20;
+printf("%d", x);
+```
+a) 10
+b) 20
+c) Address of x
+d) Error
+
+**Question 10:** What does `malloc()` return if memory allocation fails?
+a) 0
+b) NULL
+c) -1
+d) A random address
+
+**Question 11:** Which function safely copies one string to another with size limit?
+a) `strcpy()`
+b) `strncpy()`
+c) `strcat()`
+d) `strcmp()`
+
+**Question 12:** What happens if you forget to call `free()` after `malloc()`?
+a) Compilation error
+b) Runtime error
+c) Memory leak
+d) Nothing happens
+
+**Question 13:** In a linked list, what does the last node's next pointer contain?
+a) NULL
+b) The address of the first node
+c) A random address
+d) The address of the last node
+
+**Question 14:** Which header file is needed for string functions?
+a) `<stdio.h>`
+b) `<string.h>`
+c) `<stdlib.h>`
+d) `<math.h>`
+
+**Question 15:** What is the purpose of header guards in header files?
+a) To include the file multiple times
+b) To prevent multiple inclusions
+c) To define constants
+d) To declare functions
 
 ---
 
-## Section B: Linked List Analysis (25 marks)
-*Analyze and complete the linked list code. 5 marks each.*
+## Section B: Short Answer Questions (25 marks)
+*Provide clear, concise answers. 5 marks each.*
 
-**Question 16:** Complete this function to delete the head node:
+**Question 16:** Explain the difference between stack and heap memory. Give one advantage and one disadvantage of each.
+
+**Question 17:** What is the purpose of function prototypes in header files? Why can't we put function definitions in header files?
+
+**Question 18:** Explain what "pass by value" means in C functions. How does this affect the original variables?
+
+**Question 19:** What is a memory leak and how does it occur in C programs? How can it be prevented?
+
+**Question 20:** Explain the difference between `char str[] = "Hello"` and `char *str = "Hello"`. Which one is modifiable?
+
+---
+
+## Section C: Code Completion (20 marks)
+*Complete the missing parts of the code. 5 marks each.*
+
+**Question 21:** Complete this function to find the minimum value in an array:
 ```c
-struct node* delete_head(struct node *head) {
-    if (head == NULL) {
-        return ______;
+int find_min(int array[], int size) {
+    int min = array[0];
+    for (int i = ______; i < ______; i++) {
+        if (array[i] ______ min) {
+            min = ______;
+        }
     }
-    
-    struct node *temp = ______;
-    head = ______;
-    ______(temp);
-    
-    return head;
+    return min;
 }
 ```
 
-**Question 17:** Find and fix the error in this deletion function:
+**Question 22:** Fill in the blanks to create a function that counts vowels in a string:
 ```c
-struct node* delete_value(struct node *head, int value) {
-    if (head->data == value) {
-        head = head->next;
-        return head;  // What's wrong here?
-    }
-    
-    struct node *current = head;
-    while (current->next != NULL && current->next->data != value) {
-        current = current->next;
-    }
-    
-    if (current->next != NULL) {
-        current->next = current->next->next;
-    }
-    
-    return head;
-}
-```
-
-**Question 18:** Complete this function to count positive numbers in a linked list:
-```c
-int count_positive(struct node *head) {
+int count_vowels(char str[]) {
     int count = 0;
-    struct node *current = ______;
-    
-    while (______ != NULL) {
-        if (current->data > ______) {
+    for (int i = 0; str[i] != ______; i++) {
+        char c = tolower(str[i]);
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
             ______;
         }
-        current = ______;
     }
-    
     return count;
 }
 ```
 
-**Question 19:** Arrange these lines to create a function that deletes the tail node:
-```
-A. if (head == NULL) return NULL;
-B. struct node* delete_tail(struct node *head) {
-C. if (head->next == NULL) {
-D. free(head);
-E. return NULL;
-F. }
-G. struct node *current = head;
-H. while (current->next->next != NULL) {
-I. current = current->next;
-J. }
-K. free(current->next);
-L. current->next = NULL;
-M. return head;
-N. }
-```
-
-Write the correct order: _________________________
-
-**Question 20:** What will this code print for the list 1->2->3->NULL?
+**Question 23:** Complete this function to insert a node at the end of a linked list:
 ```c
-struct node *current = head;
-int count = 0;
-while (current != NULL) {
-    count++;
-    current = current->next;
-}
-printf("Count: %d", count);
-```
-Answer: ________________
-
----
-
-## Section C: Problem Solving (25 marks)
-
-**Question 21: Exam Strategy (10 marks)**
-You're taking a 2-hour exam with these questions:
-- 20 Multiple choice (2 marks each) - estimated 20 minutes
-- 5 Short functions (6 marks each) - estimated 60 minutes  
-- 2 Full programs (20 marks each) - estimated 40 minutes
-
-a) What's your time allocation strategy? (3 marks)
-b) Which questions would you attempt first and why? (4 marks)
-c) How would you handle a question you're stuck on? (3 marks)
-
-**Question 22: Debug Analysis (15 marks)**
-A student wrote this linked list function but it has multiple bugs:
-
-```c
-struct node* insert_sorted(struct node *head, int value) {
+struct node* insert_at_tail(struct node *head, int data) {
     struct node *new_node = malloc(sizeof(struct node));
-    new_node->data = value;
+    if (new_node == NULL) return head;
     
-    if (head == NULL || value < head->data) {
-        new_node->next = head;
-        return new_node;
+    new_node->data = data;
+    new_node->next = NULL;
+    
+    if (head == NULL) {
+        return ______;
     }
     
     struct node *current = head;
-    while (current->next != NULL && current->next->data < value) {
-        current = current->next;
+    while (current->next != NULL) {
+        current = current->______;
     }
     
-    new_node->next = current->next;
     current->next = new_node;
-    
-    return head;
+    return ______;
 }
 ```
 
-a) Identify two potential issues with this code (6 marks)
-b) Write the corrected version (9 marks)
+**Question 24:** Complete this command line argument processor:
+```c
+int main(int argc, char *argv[]) {
+    if (argc < ______) {
+        printf("Usage: %s <filename>\n", ______);
+        return 1;
+    }
+    
+    char *filename = ______;
+    printf("Processing file: %s\n", filename);
+    return 0;
+}
+```
 
 ---
 
-## Section D: Implementation (20 marks)
+## Section D: Programming Problems (25 marks)
 
-**Question 23: Complete Linked List Implementation (20 marks)**
-Write a complete program that demonstrates linked list operations:
+**Question 25: Dynamic Array Manager (15 marks)**
+Write a complete program that:
+- Prompts the user for an initial array size
+- Dynamically allocates memory for that many integers
+- Allows the user to add numbers to the array (with automatic resizing)
+- Displays the array contents
+- Properly frees all allocated memory
 
-**Requirements:**
-1. **Define a node structure** for storing integers
-2. **Implement these functions:**
-   - `struct node* create_node(int data)` - creates a new node
-   - `struct node* insert_head(struct node *head, int data)` - inserts at beginning
-   - `struct node* delete_value(struct node *head, int value)` - deletes first occurrence
-   - `void print_list(struct node *head)` - prints all values
-   - `void free_list(struct node *head)` - frees all memory
+Include proper error checking for `malloc()` failure.
 
-3. **In main function:**
-   - Create a list with values: 10, 20, 30
-   - Print the list
-   - Delete the value 20
-   - Print the list again
-   - Free all memory
-
-**Example Output:**
-```
-List: 10 -> 20 -> 30 -> NULL
-After deleting 20: 10 -> 30 -> NULL
-```
-
-**Grading Criteria:**
-- Correct struct definition (2 marks)
-- Proper create_node implementation (3 marks)
-- Correct insert_head implementation (4 marks)
-- Proper delete_value with memory management (6 marks)
-- Working print_list and main function (3 marks)
-- Memory cleanup (2 marks)
+**Question 26: String Processor (10 marks)**
+Write a program that:
+- Takes a sentence as command line argument
+- Implements a function `void remove_spaces(char str[])` that removes all spaces
+- Implements a function `int count_words(char str[])` that counts words
+- Displays the original sentence, the sentence without spaces, and the word count
 
 ---
 
 ## Answer Template
 
-**Section B - Linked List Analysis:**
+**Section B - Short Answers:**
 
-**Q16:**
+**Q16:** ________________________________________________
+________________________________________________________
+
+**Q17:** ________________________________________________
+________________________________________________________
+
+**Q18:** ________________________________________________
+________________________________________________________
+
+**Q19:** ________________________________________________
+________________________________________________________
+
+**Q20:** ________________________________________________
+________________________________________________________
+
+**Section C - Code Completion:**
+
+**Q21:**
 ```c
-struct node* delete_head(struct node *head) {
-    if (head == NULL) {
-        return ______;
+int find_min(int array[], int size) {
+    int min = array[0];
+    for (int i = ______; i < ______; i++) {
+        if (array[i] ______ min) {
+            min = ______;
+        }
     }
-    
-    struct node *temp = ______;
-    head = ______;
-    ______(temp);
-    
-    return head;
+    return min;
 }
 ```
 
-**Q17:**
-Issue: ________________________________________________
-Corrected code:
+**Q22:**
 ```c
-// Write corrected version
-
-
-
-
-```
-
-**Q18:**
-```c
-int count_positive(struct node *head) {
+int count_vowels(char str[]) {
     int count = 0;
-    struct node *current = ______;
-    
-    while (______ != NULL) {
-        if (current->data > ______) {
+    for (int i = 0; str[i] != ______; i++) {
+        char c = tolower(str[i]);
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
             ______;
         }
-        current = ______;
     }
-    
     return count;
 }
 ```
 
-**Q19:** Line order: _________________________________
-
-**Q20:** Answer: ________________
-
-**Section C - Problem Solving:**
-
-**Q21:**
-a) Time allocation: ___________________________________
-b) Question order: ___________________________________
-c) Stuck strategy: ___________________________________
-
-**Q22:**
-a) Issues identified:
-1. _______________________________________________
-2. _______________________________________________
-
-b) Corrected code:
+**Q23:**
 ```c
-// Write corrected version here
+struct node* insert_at_tail(struct node *head, int data) {
+    struct node *new_node = malloc(sizeof(struct node));
+    if (new_node == NULL) return head;
+    
+    new_node->data = data;
+    new_node->next = NULL;
+    
+    if (head == NULL) {
+        return ______;
+    }
+    
+    struct node *current = head;
+    while (current->next != NULL) {
+        current = current->______;
+    }
+    
+    current->next = new_node;
+    return ______;
+}
+```
+
+**Q24:**
+```c
+int main(int argc, char *argv[]) {
+    if (argc < ______) {
+        printf("Usage: %s <filename>\n", ______);
+        return 1;
+    }
+    
+    char *filename = ______;
+    printf("Processing file: %s\n", filename);
+    return 0;
+}
+```
+
+**Section D - Programming Problems:**
+
+**Q25: Dynamic Array Manager**
+```c
+// Write your complete program here
 
 
 
 
 ```
 
-**Section D - Implementation:**
-
-**Q23: Complete Linked List Program**
+**Q26: String Processor**
 ```c
 // Write your complete program here
 
@@ -373,14 +331,15 @@ b) Corrected code:
 
 ## Marking Rubric
 - **MCQ (30 marks):** 2 marks per correct answer
-- **Linked List Analysis (25 marks):** 5 marks each - correct understanding and implementation
-- **Problem Solving (25 marks):** Clear reasoning and practical solutions
-- **Implementation (20 marks):** Working code with proper memory management
+- **Short Answer (25 marks):** 5 marks each - clear understanding and accurate explanation
+- **Code Completion (20 marks):** 5 marks each - correct syntax and logic
+- **Programming (25 marks):** 
+  - Q25: Dynamic allocation (8 marks), Resizing (4 marks), Memory management (3 marks)
+  - Q26: String functions (6 marks), Command line args (4 marks)
 
-**Exam Success Tips:**
-- Always check for NULL pointers in linked list operations
-- Remember to free memory when deleting nodes
-- Draw diagrams to visualize pointer operations
-- Test your logic with small examples
-- Handle edge cases (empty lists, single nodes)
-- Manage your time effectively during exams
+**Success Tips:**
+- Read each question carefully
+- Check your syntax
+- Use meaningful variable names
+- Test your logic with sample values
+- Manage your time effectively

@@ -515,7 +515,10 @@ int main(void) {
     free_list(head);
     return 0;
 }
+```
+
 **Challenge:** How would you implement delete_all_occurrences to remove every instance of a value? What about conditional deletion based on custom criteria?
+
 
 ## 3. Exam-Style Practice Problems: Your Assessment Success Toolkit
 
